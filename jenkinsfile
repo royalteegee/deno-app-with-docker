@@ -9,7 +9,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker-compose up -d -t royalkingsax/denoapp:latest'
+        sh 'docker build -t royalkingsax/denoapp:latest .' 
       }
     }
 
