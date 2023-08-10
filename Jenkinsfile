@@ -25,7 +25,7 @@ pipeline {
 
     stage('Push to DockerHub') {
       steps {
-        sh 'docker push royalkingsax/denoapp:latest'
+        sh 'docker push royalkingsax/denoapp3:latest'
       }
     }
 
