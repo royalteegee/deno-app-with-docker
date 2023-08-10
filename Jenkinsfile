@@ -1,7 +1,11 @@
 pipeline {
   agent any
+  environment {
+    DOCKERHUB_USER = credentials('DOCKER_USER')
+    DOCKERHUB_PASSWORD = credentials('DOCKER_PASSWORD')
+  }
   stages {
-    stage('Checkout the Code') {
+    stage('Checkout Code') {
       steps {
         git(url: 'https://github.com/AOKingsax/deno-app-with-docker', branch: 'main')
       }
@@ -9,7 +13,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -t royalkingsax/denoapp:latest .' 
+        sh 'docker build -t royalkingsax/denoapp3:latest .' 
       }
     }
 
