@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . ./
 
-RUN deno cache server.ts
+RUN deno cache denoapp.ts
 
 CMD ["run", "--allow-net", "denoapp.ts"]
